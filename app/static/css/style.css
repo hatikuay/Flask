@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  border-radius: 8px;
+  border: none;
+}
+
+h3 {
+  color: #343a40;
+  font-weight: bold;
+}
+
+#login-card a, #register-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#login-card a:hover, #register-card a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
