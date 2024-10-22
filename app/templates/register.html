@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block title %}Kayıt Ol{% endblock %} {% block
+    content%}
+    <div class="row justify-content-center">
+            <!-- Register Form -->
+            <div class="col-md-6">
+                <div class="card shadow-sm p-4 mb-4" id="register-card">
+                    <h3 class="text-center mb-4">Kayıt Ol</h3>
+                    <form method="POST" action="{{url_for("auth_routes.register")}}">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Adınız</label>
+                            <input type="text" class="form-control" id="name" name="username" placeholder="Adınız" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label">Şifre</label>
+                            <input type="password" class="form-control" id="register-password" name="password" placeholder="Şifre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm-password" class="form-label">Şifre Tekrarı</label>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password"placeholder="Şifre Tekrarı" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+                        <p class="text-center mt-3">Zaten hesabınız var mı? <a href="{{url_for("auth_routes.login")}}">Giriş Yap</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}

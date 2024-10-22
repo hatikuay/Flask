@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block title %}Giriş Yap{% endblock %} {% block
+content%}
+<div class="row justify-content-center">
+  <!-- Login Form -->
+  <div class="col-md-6">
+    <div class="card shadow-sm p-4 mb-4" id="login-card">
+      <h3 class="text-center mb-4">Giriş Yap</h3>
+      <form method="POST" action="{{url_for("auth_routes.login")}}">
+        <div class="mb-3">
+          <label for="username" class="form-label">Kullanıcı Adı</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Kullanıcı Adı"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Şifre</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Şifre"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+        <p class="text-center mt-3">
+          Hesabınız yok mu? <a href="{{url_for("auth_routes.register")}}">Kayıt Ol</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
