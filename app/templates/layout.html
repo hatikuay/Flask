@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{%block title%} Bankacılık Uygulaması {% endblock %}</title>
-    <!-- Bootstrap CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href={{url_for("static",filename="css/style.css")}}>
-  </head>
-  <body
-    class="d-flex align-items-center justify-content-center min-vh-100 bg-light"
-  >
-    <div class="container">
-      {%block content%}
-      {%endblock%}
-    </div>
 
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{%block title%} Bankacılık Uygulaması {% endblock %}</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href={{url_for("static",filename="css/style.css" )}}>
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+  <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div id="flash-messages">
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {%block content%}
+    {%endblock%}
+  </div>
+
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.setTimeout(function () {
+      var flashMessages = document.getElementById("flash-messages");
+      if (flashMessages) {
+        flashMessages.style.transition = "opacity 1s ease";
+        flashMessages.style.opacity = 0;
+        setTimeout(function () {
+          flashMessages.remove();
+        }, 1000); // 1 saniye sonra elementi tamamen kaldırır
+      }
+    }, 3000); // Mesajlar 3 saniye sonra kaybolmaya başlar
+  </script>
+
+</body>
+
 </html>

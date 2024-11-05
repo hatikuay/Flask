@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Overview Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Genel Bakış (Overview)
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Toplam Bakiyeler</h5>
+                        <p><strong>25,000 TL</strong></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Son Hareketler</h5>
+                        <ul>
+                            <li>Fatura Ödeme - 200 TL</li>
+                            <li>Para Transferi - 500 TL</li>
+                            <li>Market Alışverişi - 150 TL</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Kredi Durumu</h5>
+                        <p>Kredi Kartı Limiti: 10,000 TL</p>
+                        <p>Mevcut Borç: 2,500 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Details Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Hesap Detayları (Account Details)
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="accountTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="vadesiz-tab" data-bs-toggle="tab" data-bs-target="#vadesiz"
+                            type="button" role="tab">Vadesiz Hesaplar</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tasarruf-tab" data-bs-toggle="tab" data-bs-target="#tasarruf" type="button"
+                            role="tab">Tasarruf Hesapları</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="kredi-tab" data-bs-toggle="tab" data-bs-target="#kredi" type="button"
+                            role="tab">Kredi Kartları</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="accountTabsContent">
+                    <div class="tab-pane fade show active p-3" id="vadesiz" role="tabpanel">
+                        <h5>Vadesiz Hesap Bakiyesi: 15,000 TL</h5>
+                        <p>Son Yatırım: 2,000 TL</p>
+                        <p>Son Çekim: 500 TL</p>
+                    </div>
+                    <div class="tab-pane fade p-3" id="tasarruf" role="tabpanel">
+                        <h5>Tasarruf Hesap Bakiyesi: 7,500 TL</h5>
+                        <p>Faiz Oranı: %5</p>
+                        <p>Vade Tarihi: 01/12/2023</p>
+                    </div>
+                    <div class="tab-pane fade p-3" id="kredi" role="tabpanel">
+                        <h5>Kredi Kartı Limitleri</h5>
+                        <p>Mevcut Limit: 10,000 TL</p>
+                        <p>Mevcut Borç: 2,500 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Income-Expense Analysis Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Gelir-Gider Analizi (Income-Expense Analysis)
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Aylık Gelir-Gider Grafiği</h5>
+                        <p>Grafikler buraya gelecek...</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Kategori Bazında Giderler</h5>
+                        <p>Grafikler buraya gelecek...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Hızlı İşlemler (Quick Actions)
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary w-100 mb-2">Para Transferi</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-secondary w-100 mb-2">Fatura Ödeme</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-info w-100 mb-2">Düzenli Ödemeler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications and Alerts Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Bildirimler ve Uyarılar (Notifications and Alerts)
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Gelen Transfer: 1,000 TL</li>
+                    <li>Yaklaşan Fatura Tarihi: Elektrik Faturası - 28/11/2023</li>
+                    <li>Güvenlik Uyarısı: Şüpheli Giriş Denemesi</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User Profile and Settings Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Kullanıcı Profili ve Ayarlar (User Profile and Settings)
+            </div>
+            <div class="card-body">
+                <h5>Kışisel Bilgiler</h5>
+                <p>Kullanıcı Adı: Ercan</p>
+                <p>Email: ercan@example.com</p>
+                <button class="btn btn-warning">Bilgileri Güncelle</button>
+                <hr>
+                <h5>Güvenlik Ayarları</h5>
+                <button class="btn btn-danger">Şifre Değiştir</button>
+                <button class="btn btn-secondary">2FA Ayarları</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
